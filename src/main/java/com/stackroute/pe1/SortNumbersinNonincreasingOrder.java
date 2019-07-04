@@ -1,17 +1,17 @@
 package com.stackroute.pe1;
 
 
-public class sorting {
+public class SortNumbersinNonincreasingOrder {
 
-    public String NumberSorting(int number) {
+    public String numberSorting(int number) {
         if (number <= 0) {
             return "Error";
         } else {
             //sort the number in non-decreasing order
-            int arr[] = new int[20];
+            int array[] = new int[20];
             int count = 0;
             while (number > 0) {
-                arr[count] = number % 10;
+                array[count] = number % 10;
                 count = count + 1;
                 number = number / 10;
 
@@ -19,26 +19,25 @@ public class sorting {
             int temp = 0;
             for (int i = 0; i < count; i++) {
                 for (int j = i + 1; j < count; j++) {
-                    if (arr[i] < arr[j]) {
-                        temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
+                    if (array[i] < array[j]) {
+                        temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
                     }
                 }
             }
-            int res = 0;
+            int result = 0;
             for (int i = 0; i < count; i++) {
-                res = (res * 10) + arr[i];
+                result = (result * 10) + array[i];
             }
-            //System.out.println("Sorted number in non-increasing order : "+res);
+   //to find sum of array
             int sum = 0;
             for (int i = 0; i < count; i++) {
-                if (arr[i] % 2 == 0) {
-                    sum = sum + arr[i];
+                if (array[i] % 2 == 0) {
+                    sum = sum + array[i];
                 }
             }
 
-            //System.out.println("Sum of even numbers : "+sum);
             if (sum > 15) {
                 return "True";
             } else {

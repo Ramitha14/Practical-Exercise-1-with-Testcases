@@ -1,22 +1,22 @@
 package com.stackroute.pe1;
 
-public class palindrome {
+public class PalindromeNumber {
 
-    public String CheckPalindrome(long num) {
+    public String checkPalindrome(long number) {
         //check whether the given number is palindrome or not
-        long res = num, sum = 0;
-        while (num > 0) {
-            long dig = num % 10;
-            sum = (sum * 10) + dig;
-            num = num / 10;
+        long result = number, sum = 0;
+        while (number > 0) {
+            long digit = number % 10;
+            sum = (sum * 10) + digit;
+            number = number / 10;
         }
-        if (res == sum) {
+        if (result == sum) {
             //sum of even digits
             long sum2 = 0;
             while (sum > 0) {
-                long dig = sum % 10;
-                if (dig % 2 == 0) {
-                    sum2 = sum2 + dig;
+                long digit = sum % 10;
+                if (digit % 2 == 0) {
+                    sum2 = sum2 + digit;
                 }
                 sum = sum / 10;
 

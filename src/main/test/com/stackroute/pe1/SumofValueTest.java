@@ -5,33 +5,33 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class totalvalueTest{
+public class SumofValueTest{
 
-    totalvalue obj;
+    SumofValue obj;
     @Before
     public void setup()
     {
-        obj=new totalvalue();
+        obj=new SumofValue();
     }
     @Test
-    public void SumOfNumbers()
+    public void givenArrayShouldreturnTwenty()
     {
         int a1[]={10,3,2,5};
-        int result=obj.sumofnumbers(a1);
+        int result=obj.sumofNumbers(a1);
         assertEquals(20,result);
     }
     @Test
-    public void SumOfNumbers2()
+    public void givenArrayShouldreturnZero()
     {
         int a2[]={10,3,2,-15};
-        int result=obj.sumofnumbers(a2);
+        int result=obj.sumofNumbers(a2);
         assertEquals(0,result);
     }
     @Test
-    public void SumOfNumbers3()
+    public void givenArrayShouldreturnNegativeTen()
     {
         int a3[]={0,3,2,-15};
-        int result=obj.sumofnumbers(a3);
+        int result=obj.sumofNumbers(a3);
         assertEquals(-10,result);
     }
 

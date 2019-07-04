@@ -2,9 +2,9 @@ package com.stackroute.pe1;
 
 import java.io.*;
 import java.util.*;
-public class repeat {
-
-    public String SplitString(String input1,int input2)
+public class Stringrepeat {
+//to split and repeat the string
+    public String splitString(String input1,int input2)
     {
         String reverse="",res=input1;
         int count=0;
@@ -20,7 +20,7 @@ public class repeat {
         {
             reverse2=reverse2+reverse.charAt(j);
         }
-        //System.out.print(input1);
+
         for(int i=0;i<input2;i++)
         {
             res=res+reverse2;

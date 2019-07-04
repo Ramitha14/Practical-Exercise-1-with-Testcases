@@ -5,47 +5,47 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class characterTest {
-    character ch;
+public class CharacterTest {
+    Character character;
 
     @Before
     public void setup(){
         //System.out.println("Before");
-        ch=new character();
+        character=new Character();
     }
     @Test
-    public void upper() {
+    public void givenCharactershouldReturnUppercase() {
         // Arrange
         // App app = new App();
         //Act
-        String result = ch.findcharacter('A');
+        String result = character.findCharacter('A');
         //Assert
         assertEquals("Upper case", result);
     }
     @Test
-    public void lower() {
+    public void givenCharactershouldReturnLowercase() {
         // Arrange
         // App app = new App();
         //Act
-        String result = ch.findcharacter('a');
+        String result = character.findCharacter('a');
         //Assert
         assertEquals("Lower case", result);
     }
     @Test
-    public void digit() {
+    public void givenNumbershouldReturnDigit() {
         // Arrange
         // App app = new App();
         //Act
-        String result = ch.findcharacter('9');
+        String result = character.findCharacter('9');
         //Assert
         assertEquals("Digit", result);
     }
     @Test
-    public void Special() {
+    public void givenCharactershouldReturnSpecialcharacter() {
         // Arrange
         // App app = new App();
         //Act
-        String result = ch.findcharacter('%');
+        String result = character.findCharacter('%');
         //Assert
         assertEquals("Special character", result);
     }
